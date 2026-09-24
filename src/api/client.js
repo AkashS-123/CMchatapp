@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:4000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://cmchatapp-1-1gke.onrender.com'
 
 async function request(path, options = {}) {
   const res = await fetch(`${API_URL}${path}`, {
