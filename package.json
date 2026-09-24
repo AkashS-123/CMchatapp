@@ -4,16 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "server": "json-server --watch db.json --port 4000",
-  "dev:all": "concurrently -n WEB,API -c blue,magenta \"npm:dev\" \"npm:server\"",
-  "build": "vite build",
-  "lint": "oxlint",
-  "preview": "vite preview",
-  "server:prod": "json-server db.json --host 0.0.0.0 --port $PORT"
-},
+    "dev": "vite",
+    "server": "json-server --watch db.json --port 4000",
+    "dev:all": "concurrently -n WEB,API -c blue,magenta \"npm:dev\" \"npm:server\"",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "server:prod": "node server.js"
+  },
   "dependencies": {
     "concurrently": "^10.0.5",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "json-server": "^1.0.0-beta.15",
     "lucide-react": "^1.47.0",
     "react": "^19.2.8",
