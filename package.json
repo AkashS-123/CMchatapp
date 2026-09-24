@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "server": "json-server --watch db.json --port 4000",
-    "dev:all": "concurrently -n WEB,API -c blue,magenta \"npm:dev\" \"npm:server\"",
-    "build": "vite build",
-    "lint": "oxlint",
-    "preview": "vite preview",
-  "server:prod": "json-server --watch db.json --host 0.0.0.0 --port $PORT"
-  },
+  "dev": "vite",
+  "server": "json-server --watch db.json --port 4000",
+  "dev:all": "concurrently -n WEB,API -c blue,magenta \"npm:dev\" \"npm:server\"",
+  "build": "vite build",
+  "lint": "oxlint",
+  "preview": "vite preview",
+  "server:prod": "json-server db.json --host 0.0.0.0 --port $PORT"
+},
   "dependencies": {
     "concurrently": "^10.0.5",
     "json-server": "^1.0.0-beta.15",
